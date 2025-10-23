@@ -1,5 +1,9 @@
 # TP4_InfoMed_Azcueta_Pires
-https://www.google.com/url?sa=i&url=https%3A%2F%2Far.programasinnovacion.itba.edu.ar%2Fproductos%2Fgeneral%2Fcertificacion-profesional-en-deep-learning%2F&psig=AOvVaw1znRZfhskXPgqzFEhsHP6d&ust=1761316261288000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMD89cPEupADFQAAAAAdAAAAABAE<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/f4f04772-8b57-40c9-b739-d03375f2ce0c" />
+<p align="center">
+  <img width="256" height="256" alt="image" src="https://github.com/user-attachments/assets/80ff7ae5-cc81-4e73-8a49-ee3466006101">
+</p>
+
+
 
 Repositorio para las querys del TP4 de la materia informática médica (16.22)
 
