@@ -1,0 +1,2 @@
+--6 Obtener el nombre y la dirección de los pacientes que viven en Buenos Aires.
+Select nombre, calle, numero from pacientes where ciudad ILIKE '%s %' -- por si no se corrigió la base de datos previamente
