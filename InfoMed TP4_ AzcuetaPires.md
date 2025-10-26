@@ -8,8 +8,10 @@ Azcueta-Pires
 La base de datos es relacional, ya que organiza la información en tablas vinculadas mediante claves primarias y foráneas (por ejemplo, pacientes, médicos, recetas) que permiten establecer relaciones entre los datos. Según su propósito, es una base de datos transaccional (OLTP), ya que su objetivo principal es registrar y gestionar operaciones diarias del centro de salud (registro de pacientes, emisión de recetas) con integridad y rapidez, más que realizar análisis históricos o agregados propios de un data warehouse.
 
 2)
+![WhatsApp Image 2025-10-26 at 19 43 11_f3eb191b](https://github.com/user-attachments/assets/66e59b80-4ded-485a-8452-1bbd8066c6f2)
 
 3)
+![WhatsApp Image 2025-10-26 at 20 22 10_cca55f56](https://github.com/user-attachments/assets/ca005174-f6e8-4c14-ad6c-7dd0f470eda2)
 
 4)
 La base de datos se encuentra parcialmente normalizada, ya que presenta una estructura coherente y con relaciones bien definidas, pero aún podrían optimizarse algunos aspectos para cumplir plenamente con las tres primeras formas normales. Para alcanzar la Primera Forma Normal (1FN), se debe asegurar que todos los campos contengan valores atómicos, sin grupos repetidos, sin listas ni atributos multivaluados (por ejemplo, direcciones separadas correctamente en calle, número y ciudad). Para la Segunda Forma Normal (2FN), sería necesario eliminar dependencias parciales en tablas con claves compuestas, asegurando que cada atributo dependa totalmente de la clave primaria. Finalmente, para cumplir la Tercera Forma Normal (3FN), deberían eliminarse las dependencias transitivas, separando en nuevas tablas los datos que dependen de otros atributos no clave (por ejemplo, especialidades o direcciones profesionales). Estas mejoras reducirían la redundancia y aumentarían la integridad de la base de datos.
