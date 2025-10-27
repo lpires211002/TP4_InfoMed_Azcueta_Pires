@@ -18,6 +18,9 @@ La base de datos se encuentra parcialmente normalizada, ya que presenta una estr
 
 ## Parte 2: *Query's*
 
+Es importante recalcar que muchas de las capturas estan cortadas por la extensión que permite la pantalla.
+
+
 1. Cuando se realizan consultas sobre la tabla paciente agrupando por ciudad, los tiempos de respuesta son demasiado largos. Proponer mediante una query SQL una solución a este problema.
 
 ```sql
@@ -204,15 +207,18 @@ Order by m.nombre, count(c.id_consulta) DESC
 <img width="597" height="339" alt="Captura de pantalla 2025-10-26 a la(s) 5 13 10 p  m" src="https://github.com/user-attachments/assets/2a4613a7-50a2-4c4a-82ef-80e27c4da451" />
 
 17. Obtener el nombre del medicamento junto con el total de recetas prescritas para ese medicamento, el nombre del médico que lo recetó y el nombre del paciente al que se le recetó, ordenado por total de recetas en orden descendente
+
+> El enunciado fue resuelto a consciencia en función de nuestra interpretación. Nos pareció redundante pedir la **cantidad total** de recetas prescriptas para **un medicamento**, y luego **los datos relacionados al médico y paciente de cada uno**, ya que el valor siempre será de 1, salvo el extraño caso donde el mismo médico recete al mismo paciente, el mismo medicamento.
+
 ```sql
 SELECT medicamentos.nombre, count(id_receta) as total_recetas, medicos.nombre, pacientes.nombre from medicamentos
 join recetas on recetas.id_medicamento=medicamentos.id_medicamento
 join pacientes on pacientes.id_paciente=recetas.id_paciente
 join medicos on recetas.id_medico=medicos.id_medico
 GROUP by medicamentos.nombre,medicos.nombre, pacientes.nombre
-Order by total_recetas Desc
+Order by medicamentos.nombre, total_recetas Desc
 ```
-<img width="595" height="342" alt="Captura de pantalla 2025-10-26 a la(s) 5 13 32 p  m" src="https://github.com/user-attachments/assets/383d6fc1-2443-4b71-87c2-91140e22797c" />
+<img width="799" height="468" alt="Captura de pantalla 2025-10-26 a la(s) 10 49 40 p  m" src="https://github.com/user-attachments/assets/80a3ca11-0563-4c1d-8490-74287ef52756" />
 
 18. Obtener el nombre del médico junto con el total de pacientes a los que ha atendido, ordenado por el total de pacientes en orden descendente.
 ```sql
